@@ -27,7 +27,7 @@
 }, function(t, e, n) {
     "use strict";
     Object.defineProperty(e, "__esModule", { value: !0 });
-    var i = { GAME: { DIFFICULTY: { EASY: 4, MEDIUM: 5, HARD: 6 }, TYPE: { PRACTICE: 1, CHALLENGE: 2, COUNTDOWN: 3 }, ACTIONS: { 계속하기: 1, 다시시작: 2, 나가기: 3 } }, SOCIAL: { PLATFORMS: { FB: { NAME: "Facebook", ICON: "facebook", URL: function(t) { return "https://www.facebook.com/sharer/sharer.php?u=" + encodeURI(t) } }, TWITTER: { NAME: "Twitter", ICON: "twitter", URL: function(t, e, n) { return "http://twitter.com/" + (t ? "share?" : "intent/tweet?") + (e ? "text=" + encodeURI(e) + "&" : "") + (t ? "url=" + encodeURI(t) + "&" : "") + (n ? "hashtags=" + encodeURI(n.join(",")) : "") } } }, MESSAGE: "I wasted my time on BreakLock, it's pointless, don't try it.", TAGS: ["breaklock"] }, URL: "https://maxwellito.github.io/breaklock/", COLORS: { BRIGHT: "#ffffff", DARK: "#14171b", SUCCESS: "#116699", ERROR: "#ff0000" }, PATTERN: { HEX_COLOR_START: "66", HEX_COLOR_END: "FF" } };
+    var i = { GAME: { DIFFICULTY: { EASY: 4, MEDIUM: 5, HARD: 6 }, TYPE: { PRACTICE: 1, CHALLENGE: 2, COUNTDOWN: 3 }, ACTIONS: { 계속하기: 1, 다시시작: 2, 나가기: 3 } }, SOCIAL: { PLATFORMS: { FB: { NAME: "Facebook", ICON: "facebook", URL: function(t) { return "https://www.facebook.com/sharer/sharer.php?u=" + encodeURI(t) } }, TWITTER: { NAME: "Twitter", ICON: "twitter", URL: function(t, e, n) { return "http://twitter.com/" + (t ? "share?" : "intent/tweet?") + (e ? "text=" + encodeURI(e) + "&" : "") + (t ? "url=" + encodeURI(t) + "&" : "") + (n ? "hashtags=" + encodeURI(n.join(",")) : "") } } }, MESSAGE: "Breaklock에서 패턴을 해결해보세요. 오직 네이버 웨일에서만 플레이할 수 있습니다.", TAGS: ["breaklock"] }, URL: "https://store.whale.naver.com", COLORS: { BRIGHT: "#ffffff", DARK: "#14171b", SUCCESS: "#116699", ERROR: "#ff0000" }, PATTERN: { HEX_COLOR_START: "66", HEX_COLOR_END: "FF" } };
     e.default = i
 }, function(t, e, n) {
     "use strict";
@@ -615,7 +615,7 @@
                     var i = f.default.create("a", { class: "summary-share-link", rel: "noopener noreferrer", target: "_blank", platform: n }, [f.default.icon(l.default.SOCIAL.PLATFORMS[n].ICON)]);
                     this.socialButtons.push(i)
                 }
-                var a = f.default.create("div", "summary-feedback bloc", [f.default.create("p", {}, [f.default.create("span", {}, "게임이 마음에 드시나요?"), f.default.create("a", { href: "https://store.whale.naver.com" }, "웨일 스토어 >")])]);
+                var a = f.default.create("div", "summary-feedback bloc", [f.default.create("p", {}, [f.default.create("span", {}, "게임이 마음에 드시나요?  "), f.default.create("a", { href: "https://store.whale.naver.com" }, "웨일 스토어 >")])]);
                 return this.titleEl = f.default.create("h1", "summary-title highlight"), this.detailsEl = f.default.create("p", "summary-details"), this.revealEl = f.default.create("p", "summary-reveal", "또 다른 패턴을 해결해보세요."), this.actionsEl = f.default.create("div", "summary-actions bloc", this.actionButtons), this.socialEl = f.default.create("div", "summary-share bloc", this.socialButtons), this.el = f.default.create("div", "summary view", [f.default.create("div", "view-bloc", [this.titleEl, this.detailsEl, this.revealEl]), f.default.create("div", "view-bloc", [this.actionsEl, this.socialEl, a])]), this.el
             }
         }, {
