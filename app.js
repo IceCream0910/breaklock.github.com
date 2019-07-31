@@ -27,7 +27,7 @@
 }, function(t, e, n) {
     "use strict";
     Object.defineProperty(e, "__esModule", { value: !0 });
-    var i = { GAME: { DIFFICULTY: { EASY: 4, MEDIUM: 5, HARD: 6 }, TYPE: { PRACTICE: 1, CHALLENGE: 2, COUNTDOWN: 3 }, ACTIONS: { 과정보기: 1, 다시시작: 2, 끝내기: 3 } }, SOCIAL: { PLATFORMS: { FB: { NAME: "Facebook", ICON: "facebook", URL: function(t) { return "https://www.facebook.com/sharer/sharer.php?u=" + encodeURI(t) } }, TWITTER: { NAME: "Twitter", ICON: "twitter", URL: function(t, e, n) { return "http://twitter.com/" + (t ? "share?" : "intent/tweet?") + (e ? "text=" + encodeURI(e) + "&" : "") + (t ? "url=" + encodeURI(t) + "&" : "") + (n ? "hashtags=" + encodeURI(n.join(",")) : "") } } }, MESSAGE: "Breaklock에서 패턴을 해결해보세요. 오직 네이버 웨일에서만 플레이할 수 있습니다.", TAGS: ["breaklock"] }, URL: "https://store.whale.naver.com", COLORS: { BRIGHT: "#ffffff", DARK: "#14171b", SUCCESS: "#116699", ERROR: "#ff0000" }, PATTERN: { HEX_COLOR_START: "66", HEX_COLOR_END: "FF" } };
+    var i = { GAME: { DIFFICULTY: { EASY: 4, MEDIUM: 5, HARD: 6 }, TYPE: { PRACTICE: 1, CHALLENGE: 2, COUNTDOWN: 3 }, ACTIONS: { 확인: 1 } }, SOCIAL: { PLATFORMS: { FB: { NAME: "Facebook", ICON: "facebook", URL: function(t) { return "https://www.facebook.com/sharer/sharer.php?u=" + encodeURI(t) } }, TWITTER: { NAME: "Twitter", ICON: "twitter", URL: function(t, e, n) { return "http://twitter.com/" + (t ? "share?" : "intent/tweet?") + (e ? "text=" + encodeURI(e) + "&" : "") + (t ? "url=" + encodeURI(t) + "&" : "") + (n ? "hashtags=" + encodeURI(n.join(",")) : "") } } }, MESSAGE: "Breaklock에서 패턴을 해결해보세요. 오직 네이버 웨일에서만 플레이할 수 있습니다.", TAGS: ["breaklock"] }, URL: "https://icecream-dev.0pe.kr", COLORS: { BRIGHT: "#ffffff", DARK: "#14171b", SUCCESS: "#116699", ERROR: "#ff0000" }, PATTERN: { HEX_COLOR_START: "66", HEX_COLOR_END: "FF" } };
     e.default = i
 }, function(t, e, n) {
     "use strict";
@@ -227,12 +227,18 @@
             value: function(t) {
                 switch (t) {
                     case b.default.GAME.ACTIONS.NEW_GAME:
+                        window.location.reload(true);
                         this.start(this.type, this.difficulty);
+
                         break;
                     case b.default.GAME.ACTIONS.BACK_HOME:
+                        window.location.reload(true);
+
                         this.abort();
                         break;
                     case b.default.GAME.ACTIONS.CONTINUE:
+                        window.location.reload(true);
+
                         if (!0 === this.isEnded) {
                             var e = this.pattern.compare(this.pattern),
                                 n = this.buildPatternSVG(this.pattern, e);
