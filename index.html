@@ -7,7 +7,6 @@
 
     <link rel="shortcut icon" href="assets/favicon.ico">
     <meta name="theme-color" content="#14171b">
-
     <link rel="manifest" href="manifest.json">
 
     <!-- Add to home screen for Safari on iOS -->
@@ -29,6 +28,7 @@
     <meta name="msapplication-TileColor" content="#14171b">
 
     <link rel="stylesheet" type="text/css" href="app.css">
+
 </head>
 
 <body>
@@ -42,33 +42,34 @@
         </style>
     </p>
 
+
     <!-- Static content -->
     <div style="display: none;">
         <div id="instructions-template">
             <object class="introduction-demo" data="assets/intro.svg" type="image/svg+xml"></object>
-            <p>점들을 연결해서 올바른 패턴을 찾아내세요. 한 번 시도할 때마다 얼마나 많은 점을 맞췄는지 알려줍니다.
-                <p>
-                    <table>
-                        <tr>
-                            <td style="width:1.5em;">&#9679;</td>
-                            <td>점 하나가 정확한 순서로 입력됨.</td>
-                        </tr>
+            <p>점들을 연결해서 올바른 패턴을 찾아내세요. 한 번 시도할 때마다 얼마나 많은 점을 맞췄는지 알려줍니다.</p>
+            <p>
+                <table>
+                    <tr>
+                        <td style="width:1.5em;">&#9679;</td>
+                        <td>점 하나가 정확한 순서로 입력됨.</td>
+                    </tr>
 
-                        <tr>
-                            <td>&#9675;</td>
-                            <br>
-                            <td><br>점 하나가 정답에 포함되어 있지만 순서는 옳지 않음.</td>
-                        </tr>
-                    </table>
-                    <p>난이도는 연결해야 할 점의 개수를 결정합니다<br> Easy 모드는 4개의 점, Medium 모드는 5개의 점, hard 모드는 6개의 점을 연결해야 합니다.</p>
-                    <p>행운을 빌게요!_</p>
-                    <br>
-                    <p class="small" style="font-size:12px;">이 게임은 ctrl+zws의 원작을 <a href="http://icecream-dev.0pe.kr/" target="_blank">@Ice Cream</a>이 한글화/재구성하였습니다.
-                    </p>
-                    <pp class="small" style="font-size:20px;">게시판</p>
+                    <tr>
+                        <td>&#9675;</td>
+                        <br>
+                        <td><br>점 하나가 정답에 포함되어 있지만 순서는 옳지 않음.</td>
+                    </tr>
+                </table>
+                <p>난이도는 연결해야 할 점의 개수를 결정합니다<br> Easy 모드는 4개의 점, Medium 모드는 5개의 점, hard 모드는 6개의 점을 연결해야 합니다.</p>
+                <p>행운을 빌게요!_</p>
+                <br>
+                <p class="small" style="font-size:12px;">이 게임은 ctrl+zws의 원작을 <a href="http://icecream-dev.0pe.kr/" target="_blank">@Ice Cream</a>이 한글화/재구성하였습니다.
+                </p>
 
 
         </div>
+
     </div>
 
     <!-- SVG Icon definitions -->
@@ -107,6 +108,7 @@
       <![endif]-->  
     </noscript>
 
+
     <script src="app.js"></script>
     <script type="text/javascript">
         // Set up service worker
@@ -123,6 +125,7 @@
             document.body.classList.add('deepblack')
         }
     </script>
-</body>
+
+
 
 </html>
